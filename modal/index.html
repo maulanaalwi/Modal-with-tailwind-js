@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+    <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <div class="container mx-auto p-4">
+        <table class="min-w-full bg-white">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="w-1/2 px-4 py-2">Nama Modal</th>
+                    <th class="w-1/2 px-4 py-2">Nilai Modal</th>
+                </tr>
+            </thead>
+            <tbody id="modalTableBody">
+            </tbody>
+        </table>
+        <button id="openModal" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Tambah Modal
+        </button>
+    </div>
+
+    <!--Modal-->
+    <div id="myModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <span class="close absolute top-0 right-0 mt-4 mr-4 text-gray-500 cursor-pointer">&times;</span>
+            <h2 class="text-xl font-bold mb-4">Tambah Modal Baru</h2>
+            <form id="modalForm">
+                <div class="mb-4">
+                    <label for="modalName" class="block text-gray-700 text-sm font-bold mb-2">Nama Modal:</label>
+                    <input type="text" id="modalName" name="modalName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="modalValue" class="block text-gray-700 text-sm font-bold mb-2">Nilai Modal:</label>
+                    <input type="text" id="modalValue" name="modalValue" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Tambah</button>
+            </form>
+        </div>
+    </div>
+    <!-- modal selesai -->
+    <script src="index.js"></script>
+</body>
+</html>
